@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manu Madhav | Tech Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fadeIn: 'fadeIn 2s ease-in-out',
+            bounceIn: 'bounceIn 1s ease-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            bounceIn: {
+              '0%': { transform: 'scale(0.5)', opacity: '0' },
+              '60%': { transform: 'scale(1.1)', opacity: '1' },
+              '100%': { transform: 'scale(1)' },
+            },
+          },
+     	     backgroundImage: {
+		  'gradient-linear': 'linear-gradient(to right, #ffffff, #cccccc, #1a1a1a, #000000)'
+		},	
+
+        }
+      }
+    }
+  </script>
+<style>
+  @keyframes scrollAlternate {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 0% 100%;
+    }
+  }
+
+  body {
+    background: repeating-linear-gradient(
+      to bottom,
+      #1a1a1a,
+      #0f0f0f 10%,
+      #1a1a1a 20%
+    );
+    background-size: 100% 200%;
+    background-repeat: repeat;
+    animation: scrollAlternate 8s linear infinite alternate;
+    color: white;
+    font-family: sans-serif;
+  }
+</style>
+
+</head>
+<body class="bg-gradient-radial text-white font-sans">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full bg-neutral-900/70 backdrop-blur z-10 animate-fadeIn shadow-md">
+    <nav class="flex justify-between items-center max-w-5xl mx-auto px-6 py-4">
+      <h1 class="text-xl font-semibold">Manu Madhav</h1>
+      <ul class="flex gap-6 text-sm">
+        <li><a href="#about" class="hover:underline transition duration-300">About</a></li>
+        <li><a href="#projects" class="hover:underline transition duration-300">Projects</a></li>
+        <li><a href="#contact" class="hover:underline transition duration-300">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center px-6 text-center" id="home">
+    <div class="animate-bounceIn">
+      <h2 class="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-neutral-300 to-white text-transparent bg-clip-text">
+        Hi, I'm Manu
+      </h2>
+      <p class="mt-4 text-lg text-neutral-400">Cybersecurity & AI enthusiast • Lifelong Learner</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="max-w-3xl mx-auto px-6 py-20 animate-fadeIn" id="about">
+    <h3 class="text-2xl font-semibold mb-4">About Me</h3>
+    <p class="text-neutral-300 transition duration-500 hover:text-white">
+      I'm a tech enthusiast with a focus on cybersecurity, artificial intelligence, and building clean web applications. I enjoy solving problems, learning new tools, and contributing to real-world projects.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="max-w-5xl mx-auto px-6 py-20 animate-fadeIn" id="projects">
+    <h3 class="text-2xl font-semibold mb-8">Projects</h3>
+    <div class="grid gap-6 md:grid-cols-2">
+      <div class="bg-gradient-to-br from-neutral-800 to-neutral-900 p-6 rounded-xl transition-transform duration-300 hover:scale-105">
+        <h4 class="text-lg font-semibold text-white">Plug and Go</h4>
+        <p class="text-sm text-neutral-400">EV charging station booking platform. Flask, SQLite, JS.</p>
+        <a href="https://github.com/manu3699/Plug-and-Go" target="_blank" class="text-blue-400 mt-2 inline-block hover:underline">GitHub</a>
+      </div>
+      <div class="bg-gradient-to-br from-neutral-800 to-neutral-900 p-6 rounded-xl transition-transform duration-300 hover:scale-105">
+        <h4 class="text-lg font-semibold text-white">Sentiment-Analysis-Project</h4>
+        <p class="text-sm text-neutral-400">A full pipeline machine learning project that classifies IMDb movie reviews as Positive or Negative.</p>
+        <a href="https://github.com/manu3699/sentiment-analysis-project" target="_blank" class="text-blue-400 mt-2 inline-block hover:underline">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="max-w-3xl mx-auto px-6 py-20 animate-fadeIn" id="contact">
+    <h3 class="text-2xl font-semibold mb-4">Contact</h3>
+    <p class="text-neutral-300 mb-4">Feel free to reach out via email or connect with me on LinkedIn.</p>
+    <p class="text-neutral-400">📧 <a href="mailto:madhavmanu905@gmail.com" class="underline hover:text-white">madhavmanu905@gmail.com</a></p>
+    <p class="text-neutral-400 mt-2">
+      🔗 
+      <a href="https://linkedin.com/in/manu-madhav-505292276" target="_blank" class="underline hover:text-white">LinkedIn</a> | 
+      <a href="https://github.com/manu3699" target="_blank" class="underline hover:text-white">GitHub</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-neutral-500 text-sm py-6 animate-fadeIn">
+    © 2025 Manu Madhav. All rights reserved.
+  </footer>
+</body>
+</html>
